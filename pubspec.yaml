@@ -1,0 +1,89 @@
+name: flutter_getx_base_project
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  get: ^4.6.6
+  flutter_screenutil: ^5.9.3
+  easy_refresh: ^3.4.0
+
+  fluttertoast: ^8.2.10
+
+  # animations: ^2.0.11
+
+  flutter_svg: ^2.0.16
+
+  dio: ^5.7.0
+  retrofit: ^4.0.1
+  json_annotation: ^4.9.0
+
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.1.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+  logger: ^2.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+  build_runner: ^2.4.6
+  json_serializable: ^6.8.0
+  retrofit_generator: '>=4.0.0 <8.0.0'
+  hive_generator: ^2.0.1
+  isar_generator: ^3.1.0
+  flutter_launcher_icons: ^0.14.2
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo.jpg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/logo.jpg"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/logo.jpg"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/logo.jpg"
+  # dart run flutter_launcher_icons
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets
+    - assets/icons
+    - assets/images/
+    - assets/
+    - assets/icons/
+    - lib/
+    - lib/base/
+    - lib/base/loadState/
+    - lib/pages/
+    - lib/pages/launch/
+    - lib/utils/
+    - lib/config/
+    - lib/models/
+    - lib/routes/
+    - lib/widget/
+    - lib/network/
+    - lib/persistent/
+# flutter pub run build_runner build
