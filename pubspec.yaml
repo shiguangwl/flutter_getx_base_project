@@ -69,21 +69,7 @@ flutter_launcher_icons:
 flutter:
   uses-material-design: true
   assets:
-    - assets
-    - assets/icons
-    - assets/images/
     - assets/
+    - assets/images/
     - assets/icons/
-    - lib/
-    - lib/base/
-    - lib/base/loadState/
-    - lib/pages/
-    - lib/pages/launch/
-    - lib/utils/
-    - lib/config/
-    - lib/models/
-    - lib/routes/
-    - lib/widget/
-    - lib/network/
-    - lib/persistent/
 # flutter pub run build_runner build

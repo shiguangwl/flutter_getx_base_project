@@ -1,9 +1,6 @@
-import 'dart:ffi';
-
 import 'package:dio/dio.dart';
 import 'package:retrofit/http.dart';
 import '../result.dart';
-import '../table_data_info.dart';
 
 part 'rest_client.g.dart';
 

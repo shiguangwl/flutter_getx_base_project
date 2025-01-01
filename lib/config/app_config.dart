@@ -1,5 +1,3 @@
-import 'dart:io';
-
 class AppConfig {
   AppConfig._();
 

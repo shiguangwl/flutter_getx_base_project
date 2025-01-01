@@ -15,7 +15,7 @@ abstract class BaseController extends GetxController
   }
 
   @override
-  void getData() {}
+  void loadData() {}
 
   void success() {
     state = PageState.SUCCESS;

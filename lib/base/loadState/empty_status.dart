@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_getx_base_project/R.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 enum EmptyStatusType {
@@ -63,9 +64,9 @@ class _EmptyStatusWidgetState extends State<EmptyStatusWidget> {
   /// 获取图片名称
   Widget _getImageWidget() {
     if (widget.emptyType == EmptyStatusType.fail) {
-      return Image.asset('assets/images/icon_image_fail.png');
+      return Image.asset(R.ImageFail);
     } else {
-      return Image.asset('assets/images/image_empty.webp');
+      return Image.asset(R.ImageEmpty);
     }
   }
 

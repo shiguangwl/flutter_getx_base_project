@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:get/get_utils/src/platform/platform.dart';
+import 'package:flutter_getx_base_project/service/AuthService.dart';
+import 'package:get/get.dart';
 
 /// 全局静态数据
 class Global {
@@ -8,11 +9,11 @@ class Global {
   static Future init() async {
     WidgetsFlutterBinding.ensureInitialized();
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-    setSystemUi();
-
+    _setSystemUi();
+    _initService();
   }
 
-  static void setSystemUi() {
+  static void _setSystemUi() {
     if (GetPlatform.isAndroid) {
       SystemUiOverlayStyle systemUiOverlayStyle = const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -26,5 +27,9 @@ class Global {
     }
   }
 
+  /// 初始化全局服务
+  static void _initService() {
+    Get.putAsync(() async => AuthService());
+  }
 
 }
