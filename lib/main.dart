@@ -8,18 +8,36 @@ import 'package:get/get_navigation/src/routes/transitions_type.dart';
 
 import 'config/them_config.dart';
 import 'global.dart';
+import 'services/storage/hive_storage_service.dart';
+import 'services/storage/isar_storage_service.dart';
+import 'persistent/hive/base/hive_manager.dart';
 
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await PersistentInit.init();
+  
+  // 初始化存储服务
+  await HiveStorageService.init();
+  await IsarStorageService.init();
+  
   await Global.init();
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
 
-  static final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
-
+class _MyAppState extends State<MyApp> {
+  @override
+  void dispose() {
+    // 应用退出时关闭Hive
+    HiveManager().dispose();
+    super.dispose();
+  }
+  
   @override
   Widget build(BuildContext context) {
     debugPaintSizeEnabled = false;
