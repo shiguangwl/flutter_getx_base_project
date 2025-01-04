@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_getx_base_project/persistent/persistent_init.dart';
 import 'package:flutter_getx_base_project/service/AuthService.dart';
 import 'package:get/get.dart';
 
@@ -11,7 +10,6 @@ class Global {
     WidgetsFlutterBinding.ensureInitialized();
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     _setSystemUi();
-    await PersistentInit.init();
     _initService();
   }
 

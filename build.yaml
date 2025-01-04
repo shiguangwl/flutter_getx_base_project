@@ -1,6 +1,0 @@
-targets:
-  $default:
-    builders:
-      hive_generator|hive_generator:
-        generate_for:
-          - lib/persistent/hive/model/**.dart 

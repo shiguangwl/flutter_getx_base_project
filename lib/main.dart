@@ -9,31 +9,17 @@ import 'package:get/get_navigation/src/routes/transitions_type.dart';
 import 'config/them_config.dart';
 import 'global.dart';
 
-import 'persistent/hive/base/hive_manager.dart';
-
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  
   await Global.init();
   runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
+  static final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-class _MyAppState extends State<MyApp> {
-  @override
-  void dispose() {
-    // 应用退出时关闭Hive
-    HiveManager().dispose();
-    super.dispose();
-  }
-  
   @override
   Widget build(BuildContext context) {
     debugPaintSizeEnabled = false;
@@ -54,6 +40,7 @@ class _MyAppState extends State<MyApp> {
             child: widget!
           );
         },
+        navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
         home: LaunchPage(),
         // initialBinding: LaunchPageBinding(),
