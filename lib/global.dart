@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_getx_base_project/service/AuthService.dart';
 import 'package:get/get.dart';
+import 'service/service_manager.dart';
 
 /// 全局静态数据
 class Global {
@@ -9,8 +9,8 @@ class Global {
   static Future init() async {
     WidgetsFlutterBinding.ensureInitialized();
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    await ServiceManager.init();
     _setSystemUi();
-    _initService();
   }
 
   static void _setSystemUi() {
@@ -26,10 +26,4 @@ class Global {
       SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
     }
   }
-
-  /// 初始化全局服务
-  static void _initService() {
-    Get.putAsync(() async => AuthService());
-  }
-
 }
