@@ -16,7 +16,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   easy_refresh: ^3.4.0
   fluttertoast: ^8.2.10
-  # animations: ^2.0.11
+  animate_do: ^4.2.0
   flutter_svg: ^2.0.16
   dio: ^5.7.0
   retrofit: ^4.0.1
