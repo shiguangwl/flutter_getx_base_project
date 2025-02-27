@@ -1,6 +1,6 @@
 {
-    "name": "flutter_getx_base_project",
-    "short_name": "flutter_getx_base_project",
+    "name": "lanyu_chat",
+    "short_name": "lanyu_chat",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#hexcode",

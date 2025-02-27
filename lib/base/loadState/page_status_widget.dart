@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_base_project/base/loadState/%20loading_widget.dart';
+import 'package:lanyu_chat/base/loadState/%20loading_widget.dart';
 import 'abstract_page_status.dart';
 import 'empty_status.dart';
 import 'error_status.dart';
@@ -29,7 +29,7 @@ class PageStatusWidget extends StatelessWidget {
         return ErrorStatusWidget(
           onRetry: () {
             logic.state = PageState.LOADING;
-            logic.loadData();
+            logic.loadData(false);
           },
         );
       case PageState.EMPTY:

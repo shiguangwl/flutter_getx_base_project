@@ -8,7 +8,7 @@ class CryptoUtil {
   CryptoUtil._();
   
   /// 盐值，用于增强密码安全性
-  static const String _salt = 'flutter_getx_base_project_salt';
+  static const String _salt = 'lanyu_chat_salt';
   
   /// 对密码进行哈希处理
   /// 

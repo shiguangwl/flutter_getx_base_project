@@ -1,8 +1,10 @@
-import 'package:flutter_getx_base_project/middleware/AuthMiddleware.dart';
-import 'package:flutter_getx_base_project/pages/home/view.dart';
+import 'package:lanyu_chat/middleware/AuthMiddleware.dart';
+import 'package:lanyu_chat/pages/home/view.dart';
 import 'package:get/get.dart';
 
 import '../pages/launch/view.dart';
+import '../pages/launch/logic.dart';
+import '../pages/home/logic.dart';
 
 
 class AppRoutes {
@@ -10,7 +12,7 @@ class AppRoutes {
   // 不需要认证的路由列表
   static final List<String> publicRoutes = [
     '/launch',
-    // '/home'
+    '/home',
     '/login',
     '/register',
     '/forgot-password',
@@ -22,8 +24,20 @@ class AppRoutes {
   static String Home = '/home';
 
   static List<GetPage> routes = [
-    GetPage(name: Launch, page: () => LaunchPage()),
-    GetPage(name: Home, page: () => HomePage()),
+    GetPage(
+      name: Launch, 
+      page: () => LaunchPage(),
+      binding: BindingsBuilder(() {
+        Get.put(LaunchLogic());
+      }),
+    ),
+    GetPage(
+      name: Home, 
+      page: () => HomePage(),
+      binding: BindingsBuilder(() {
+        Get.put(HomeLogic());
+      }),
+    ),
   ].map(_decorateWithAuth).toList();
 
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_getx_base_project/R.dart';
+import 'package:lanyu_chat/R.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 enum EmptyStatusType {

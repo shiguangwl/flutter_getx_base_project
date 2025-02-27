@@ -1,4 +1,4 @@
-import 'package:flutter_getx_base_project/persistent/sp_storage.dart';
+import 'package:lanyu_chat/persistent/sp_storage.dart';
 
 /// 应用配置管理类
 class AppConfig {

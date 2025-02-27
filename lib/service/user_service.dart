@@ -1,5 +1,5 @@
 import 'package:drift/drift.dart';
-import 'package:flutter_getx_base_project/persistent/database/daos/user_dao.dart';
+import 'package:lanyu_chat/persistent/database/daos/user_dao.dart';
 
 import '../models/user_model.dart';
 import '../persistent/persistent_service.dart';

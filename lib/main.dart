@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_getx_base_project/pages/launch/view.dart';
-import 'package:flutter_getx_base_project/routes/router.dart';
+import 'package:lanyu_chat/pages/launch/view.dart';
+import 'package:lanyu_chat/pages/launch/logic.dart';
+import 'package:lanyu_chat/routes/router.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:get/get_navigation/src/routes/transitions_type.dart';
 
@@ -43,7 +45,9 @@ class MyApp extends StatelessWidget {
         navigatorKey: navigatorKey,
         debugShowCheckedModeBanner: false,
         home: LaunchPage(),
-        // initialBinding: LaunchPageBinding(),
+        initialBinding: BindingsBuilder(() {
+          Get.put(LaunchLogic());
+        }),
         theme: lightTheme,
         darkTheme: darkTheme,
         themeMode: ThemeMode.light,

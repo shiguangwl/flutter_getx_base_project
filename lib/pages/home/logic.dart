@@ -8,16 +8,14 @@ class HomeLogic extends BaseController {
 
   @override
   void onReady() async {
-    loadData();
+    loadData(false);
   }
 
 
   /// 在错误从试会自动调用
+  /// @param isLoadMore 是否是加载更多
   @override
-  void loadData() {
-    // 延迟3秒
-    Future.delayed(const Duration(seconds: 3), () {
-      error();
-    });
+  void loadData(bool isLoadMore) {
+      empty();
   }
 }

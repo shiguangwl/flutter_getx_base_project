@@ -1,4 +1,4 @@
-package com.example.flutter_getx_base_project
+package best.880000.lanyu_chat
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -3,7 +3,7 @@ abstract class AbstractPageStatus {
   late PageState state;
 
   /// 加载网络数据
-  void loadData();
+  void loadData(bool isLoadMore);
 }
 
 enum PageState {

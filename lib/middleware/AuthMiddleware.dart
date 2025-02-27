@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_getx_base_project/service/AuthService.dart';
+import 'package:lanyu_chat/service/AuthService.dart';
 import 'package:get/get.dart';
 
 class AuthMiddleware extends GetMiddleware {

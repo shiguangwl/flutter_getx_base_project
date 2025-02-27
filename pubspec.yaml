@@ -1,5 +1,5 @@
-name: flutter_getx_base_project
-description: "A new Flutter project."
+name: lanyu_chat
+description: "A new ai chat client project."
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -25,7 +25,6 @@ dependencies:
   path_provider: ^2.1.2
   shared_preferences: ^2.2.2
   drift: ^2.15.0
-  path: ^1.8.3
   crypto: ^3.0.6
 
 dev_dependencies:
