@@ -16,6 +16,6 @@ class HomeLogic extends BaseController {
   /// @param isLoadMore 是否是加载更多
   @override
   void loadData(bool isLoadMore) {
-      empty();
+    success();
   }
 }
