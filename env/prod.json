@@ -1,0 +1,8 @@
+{
+  "ENV": "prod",
+  "API_URL": "https://payflow-api.aaa008.com",
+  "CLIENT_ID": "8e66f1f7369986711e1bd3df4ace1778",
+  "TENANT_ID": "506337",
+  "DEBUG_LOG": false,
+  "PERF_MONITOR": false
+}

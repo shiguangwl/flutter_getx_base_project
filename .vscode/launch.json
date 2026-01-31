@@ -1,0 +1,37 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dev",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--dart-define-from-file=env/dev.json"]
+    },
+    {
+      "name": "Test",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--dart-define-from-file=env/test.json"]
+    },
+    {
+      "name": "Prod",
+      "request": "launch",
+      "type": "dart",
+      "args": ["--dart-define-from-file=env/prod.json"]
+    },
+    {
+      "name": "Prod (profile)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "args": ["--dart-define-from-file=env/prod.json"]
+    },
+    {
+      "name": "Prod (release)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release",
+      "args": ["--dart-define-from-file=env/prod.json"]
+    }
+  ]
+}
